@@ -274,7 +274,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2em;
-    padding: 2em;
   }
 
   .sidebar__links a { 
