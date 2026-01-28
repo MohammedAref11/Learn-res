@@ -39,6 +39,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins-Bold";
 }
 
+html { 
+  scroll-behavior: smooth;
+}
+
 /*
   10. Create a root stacking context
 */
@@ -204,7 +208,7 @@ body {
 @media (min-width: 750px) { 
   .navbar { 
     justify-content: space-between;
-  }
+    }
 
   .navbar__logo-container { 
       padding: var(--spacing-xs) 0.55rem;
@@ -215,7 +219,7 @@ body {
     padding: var(--spacing-xs);
     border: 2px solid var(--black); 
     border-radius: 5px;
-    cursor: pointer
+    cursor: pointer; 
   }
 
   .navbar__links a { 
@@ -313,10 +317,11 @@ body {
   .sidebar { 
     display: block;
     grid-area: sidebar;
-    position: fixed;
-    top: 5%;
+    position: sticky;
+    top: 0;
+    padding-top: 4em;
+    height: 100vh;
     padding-left: 1em;
-    
   }
 
   .page-content { 
