@@ -41,7 +41,10 @@ h1, h2, h3, h4, h5, h6 {
 
 html { 
   scroll-behavior: smooth;
+  scrollbar-color: var(--black) var(--white);
 }
+
+
 
 /*
   10. Create a root stacking context
@@ -271,6 +274,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2em;
+    padding: 2em;
   }
 
   .sidebar__links a { 
