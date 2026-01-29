@@ -44,8 +44,6 @@ html {
   scrollbar-color: var(--black) var(--white);
 }
 
-
-
 /*
   10. Create a root stacking context
 */
@@ -69,7 +67,6 @@ html {
     font-weight: 400;
 }
 
-
 /* Variables */
 
 :root { 
@@ -81,7 +78,6 @@ html {
     --font-size-xl: 1.5rem; 
     --font-size-xxl: 1.75rem; 
     --font-size-xxxl: 2rem;  
-
 
     /* Spacing */
     --spacing-xs: 0.5rem; 
@@ -152,12 +148,11 @@ body {
 
   .content__cards-grid { 
     display: grid;
-    grid-template-columns: 350px;
+    grid-template-columns: minmax(200px, 300px);
     place-content: center; 
     grid-gap: 2em;
     padding: 1rem;
   }
-
 
   .card { 
     display: flex;
@@ -172,7 +167,7 @@ body {
   }
 
   .section__title { 
-    padding: 0 1rem;
+    padding: var(--spacing-xxxl) var(--spacing-m);
     font-size: var(--font-size-xxxl);
   }
 
@@ -182,12 +177,13 @@ body {
 
   .card__description { 
     font-size: calc(var(--font-size-m) - 0.1rem);
+    line-height: 1.5;
   }
 
   .card__link { 
     text-decoration: none;
     color: black;
-    padding: var(--spacing-s);
+    padding: var(--spacing-xs)   var(--spacing-s);
     border: 1px solid var(--black);
     width: fit-content;
     border-radius: 4px;
@@ -238,10 +234,9 @@ body {
 
   .content__cards-grid { 
     display: grid;
-    grid-template-columns: repeat(auto-fit, 200px);
+    grid-template-columns: repeat(auto-fit, minmax(150px , 200px));
     grid-gap: var(--spacing-xxxl);
   }
-
 }
 
 /* Desktop */
@@ -300,8 +295,6 @@ body {
     scale: 1;
   }
 
-
-
   .main-content { 
     display: grid;
     grid-template-columns: 320px 1fr;
@@ -334,13 +327,10 @@ body {
 
   .content__cards-grid { 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px , 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px , auto));
     grid-gap: 2em;
   }
 
-  
-
-  
 }
 
 
